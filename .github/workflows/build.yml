@@ -28,7 +28,7 @@ jobs:
       run: |
         # --hidden-import 确保 pynput 的 Windows 驱动被打包
         # -F 打包成单文件，-w 隐藏控制台，--collect-all 收集 pynput 所有资源
-        pyinstaller --noconfirm --onefile --windowed --hidden-import="pynput.keyboard._win32" --collect-all pynput cftm.py
+        pyinstaller --noconfirm --onefile --windowed --hidden-import="pynput.keyboard._win32" --collect-all pynput V2.py
 
     - name: 上传成品
       uses: actions/upload-artifact@v4
